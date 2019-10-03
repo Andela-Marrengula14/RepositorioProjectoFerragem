@@ -65,9 +65,19 @@ public class MaterialDao {
         conex.desconexao();
     }
 
-public void aumento(int a, int b){
-
-}
+    public void aumentar(int aumento, int codigo){
+        conex.conexao();
+        try {
+            PreparedStatement pst = conex.con.prepareStatement("update material set material_quantidade=? where material_id=?");
+            pst.setInt(1, aumento);
+            pst.setInt(2, codigo);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "Dados Alterados Com Sucesso!");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Não Foi Possível Alterar Dados! \n Error: "+ex);
+        }
+        conex.desconexao();
+    }
     
     public MaterialBeans buscaMaterial(MaterialBeans mod) {
         conex.conexao();
@@ -86,5 +96,6 @@ public void aumento(int a, int b){
 
         conex.desconexao();
         return mod;
-    }        
+    }
+//qwqwqwqwqqwq        
 }
