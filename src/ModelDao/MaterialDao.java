@@ -65,7 +65,7 @@ public class MaterialDao {
         conex.desconexao();
     }
 
-    public void aumentar(int aumento, int codigo){
+public void aumentar(int aumento, int codigo){
         conex.conexao();
         try {
             PreparedStatement pst = conex.con.prepareStatement("update material set material_quantidade=? where material_id=?");
@@ -78,6 +78,7 @@ public class MaterialDao {
         }
         conex.desconexao();
     }
+
     
     public MaterialBeans buscaMaterial(MaterialBeans mod) {
         conex.conexao();
