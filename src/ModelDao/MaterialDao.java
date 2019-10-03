@@ -64,6 +64,10 @@ public class MaterialDao {
         
         conex.desconexao();
     }
+
+public void aumento(){
+
+}
     
     public MaterialBeans buscaMaterial(MaterialBeans mod) {
         conex.conexao();
