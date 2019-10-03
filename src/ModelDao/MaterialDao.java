@@ -65,7 +65,7 @@ public class MaterialDao {
         conex.desconexao();
     }
 
-public void aumento(){
+public void aumento(int a, int b){
 
 }
     
