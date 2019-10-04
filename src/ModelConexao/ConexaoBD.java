@@ -16,6 +16,8 @@ import javax.swing.JOptionPane;
  *
  * @author Aurelio Macie Junior
  */
+
+//Conecta Com O Banco De Dados
 public class ConexaoBD {
     public Statement stm;
     public ResultSet rs;
@@ -44,6 +46,8 @@ public class ConexaoBD {
         }
     }
     
+//Desconecta Com O Banco De Dados
+
     public void desconexao(){
         try {
             con.close();
